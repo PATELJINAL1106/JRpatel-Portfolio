@@ -1,0 +1,833 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* hamburger */
+.togglebtn{
+    position: absolute;
+    top:23px;
+    right: 70px;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width: 40px;
+}
+
+.bar{
+    display: block;
+    width: 100%;
+    background-color: black;
+    height: 4px;
+    border-radius: 12px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #5a48ff;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    background: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 11;
+    box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.4);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+    justify-content: space-between;
+}
+.logo{
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 150px;
+}
+.navicon{
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+
+nav li {
+    padding: 20px;
+    margin-right: 40px;
+}
+nav li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+}
+nav li a:hover{
+    border-bottom: 6px solid white;
+    border-radius: 3px;
+}
+
+.box{
+    height: 102vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* margin-top: -30px; */
+    /* border: 3px solid blue;  */
+}
+
+.head{
+    margin-top: -10px;
+    margin-left: 150px;
+    font-size: 2.5rem;
+}
+.secname{
+    margin-top: 20px;
+    margin-left: 150px;
+    font-size: 2.5rem;
+}
+.name{
+    color: #5a48ff;
+}
+
+.box1{
+    display: inline-flex;
+    margin-left: 150px;
+    margin-top: 60px;
+}
+.dynamic{
+    line-height: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+} 
+.dynamic li{
+    list-style: none;
+    color: #5a48ff;
+    font-weight: 600;
+    font-size: 2.5rem;
+    position: relative;
+    top: 0px;
+    animation: slide 8s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -10.4rem;
+    }
+}
+
+
+.dynamic li span{
+    position: relative;
+}
+.dynamic li span::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #5a48ff;
+    background-color: white;
+    animation: type 2s steps(20) infinite;
+}
+@keyframes type {
+    100%{
+        left:100%;
+        margin: 0px -35px 0px 35px;
+    }
+}
+.img{
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    height: 500px;
+    width: 550px;   
+}
+
+.About{
+    height: 75vh;
+    position: relative;
+    width: 65vw;
+    /* border: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.colorsame{
+     color: #5a48ff;
+     font-weight: bold;
+}
+.introhead{
+    margin-top: 100px;
+    margin-left: 200px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.style1{
+    margin-left: 100px;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-family: Arial, sans-serif;
+}
+.img1{
+    position: absolute;
+    top: 120%;
+    left: 65%;
+}
+
+.sec3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    height: 25vh;
+    margin-top: 120px;
+}
+
+.sec3head{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    
+}
+
+.contect{
+    font-size: large;
+    margin-bottom: 20px;
+}
+.icon{
+    width: 45px;
+    height: 45px;
+    border: 2px solid #5a48ff;
+    border-radius: 30%;
+    padding: 6px;
+}
+.icon:hover{
+    box-shadow: 1px 1px 10px 3px #5a48ff;
+}
+
+.icon1{
+    margin-left: -10px;
+}
+.icon2{
+    margin-left: 20px;
+}
+
+.foot{
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* media quaries */
+@media (min-width:1100px) and (max-width:1280px) {
+    .box{
+        height: 95vh;
+    }
+    .head{
+        margin-left: 120px;
+    }
+    .secname{
+        margin-left: 120px;
+    }
+    .box1{
+        margin-left: 120px;
+    }
+    .img{   
+        top: 26%;
+        left: 55%;
+        height: 400px;
+        width: 440px;   
+    }
+   
+    .introhead{
+        margin-top: 140px;
+        margin-left: 140px;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    .style1{
+        margin-left: 90px;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        font-family: Arial, sans-serif;
+    }
+    .img1{
+        top: 105%;
+        left: 65%;
+    }
+
+    .img1pic{
+        width: 340px;
+        height: 550px;  
+    } 
+}
+
+@media (min-width:950px) and (max-width:1099px) {
+    .box{
+        height: 90vh;
+    }
+    .logo{
+        margin-left: 110px;
+    }
+    .img{   
+        top: 30%;
+        left: 55%;
+        height: 370px;
+        width: 400px;   
+    }
+    
+    .introhead{
+        margin-top: 70px;
+        margin-left: 120px;
+        font-size: 2.2rem;
+    }
+    .style1{
+        margin-left: 70px;
+        font-size: 1.1rem;
+    }
+
+    .head{
+        margin-left: 90px;
+    }
+    .secname{
+        margin-top: 20px;
+        margin-left: 90px;
+        font-size: 2.5rem;
+    }   
+    
+    .box1{
+        margin-left: 90px;
+    }
+
+    .img1{
+        top: 95%;
+        left: 65%;
+    }
+
+    .img1pic{
+        width: 340px;
+        height: 540px;  
+    } 
+    .sec3{
+        margin-top: 80px;
+    }
+    
+}
+
+/* Quires -> 3 */
+@media (min-width:800px) and (max-width:949px) {
+    .box{
+        height: 73vh;
+    }
+    nav li {
+        margin-right: 10px;
+    }
+    .logo{
+        margin-left: 70px;
+    }
+    .img{   
+        top: 27%;
+        left: 50%;
+        height: 340px;
+        width: 390px;   
+    }
+
+    .box1{
+        margin-left: 90px;
+        margin-top: 40px;
+    }
+    .dynamic li{
+        font-size: 2rem;
+    }
+
+    .About{
+        height: 74vh;
+    }
+   
+    .introhead{
+        margin-top: 120px;
+        margin-left: 65px;
+        font-size: 1.8rem;
+    }
+    .style1{
+        margin-left: 30px;
+        font-size: 1rem;
+    }
+
+    .head{
+        margin-left: 90px;
+        font-size: 2rem;
+    }
+    .secname{
+        margin-left: 90px;
+        font-size: 2rem;
+    }       
+
+    .img1{
+        /* border: 2px solid blueviolet; */
+        top: 100%;
+        left: 65%;
+    }
+
+    .img1pic{
+        width: 280px;
+        height: 300px;  
+    } 
+    .sec3{
+        margin-top: 70px;
+    }
+    
+    .sec3head{
+        font-size: 2rem;
+    } 
+    .icon{
+        width: 40px;
+        height: 40px;
+    }   
+}
+
+/* Quires -> 4 */
+
+@media (min-width:500px) and (max-width:799px) {
+    .box{
+        height: 50vh;
+    }
+    
+    nav li {
+        margin-right: 10px;
+    }
+    .logo{
+        margin-left: 0px;
+        
+    }
+    .img{  
+        position: static; 
+        height: 400px;
+        width: 400px;  
+        display: block;
+        margin: auto; 
+        /* margin-top: 50px; */
+    }
+
+    .box1{
+        display: block  ;
+        margin-left: 120px;
+        margin-top: 35px;
+    }
+    .dynamic li{
+        font-size: 2rem;
+    }
+
+    .About{
+        height: 75vh;
+        width: 100vw;
+        margin-top: 70px;
+        /* border: 3px solid black; */
+    }
+   
+    .introhead{
+        margin-top: 70px;
+        margin-left: 0px;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .style1{
+        padding: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
+
+    .head{
+        margin-top: 40px;
+        margin-left: 120px;
+        font-size: 2rem;
+    }
+    .secname{
+        margin-left: 120px;
+        font-size: 2rem;
+    }       
+
+    .img1{
+        margin-top: 10px;
+        position: static;
+        /* border: 3px solid black; */
+    }
+    
+    .img1pic{
+        display: block;
+        width: 350px;
+        height: 350px;  
+        margin: auto;
+    } 
+    .sec3{
+        margin-top: 0px;
+    }
+    
+    .sec3head{
+        font-size: 2rem;
+    } 
+    .icon{
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* media for the nav hamburger */
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navitems ul{
+        flex-direction: column; 
+        display: none;
+    }
+    .togglebtn{
+        display: flex;
+    }
+    .navitems ul li a{
+        width: 100vw;
+        margin-left: 75px;
+        text-align: center;
+    }
+    .navitems ul li a {
+        width: 100vw;
+        padding: 10px 15px;
+    }
+    
+    .navitems ul.active{
+        display: flex;
+    }
+
+    .one{
+        display: block;
+        position:absolute;
+        transform: rotate(45deg);
+        margin-top: 15px;
+    }
+    
+    .three{
+        display: block;
+        position:absolute;
+        transform: rotate(-45deg);
+        margin-top: 15px;
+    }
+
+    .two{
+        display: none;
+    }
+}
+
+
+/* Quires -> 5 */
+
+@media (min-width:390px) and (max-width:499px) {
+    .box{
+        height: 35vh;
+    }
+    nav li {
+        padding: 10px;
+        margin-right: 20px;
+    }
+    nav li a{
+        font-size: 1rem;
+        /* display: block; */
+    }
+    .togglebtn{
+        top:21px;
+        right: 30px;
+    }
+    .logo{
+        margin-left: 0px;
+        
+    }
+    .img{  
+        position: static; 
+        height: 300px;
+        width: 280px;  
+        display: block;
+        margin: auto; 
+        /* margin-top: 50px; */
+    }
+
+    .box1{
+        display: block  ;
+        margin-left: 0px;
+        text-align: center;
+        width: 98vw;
+        margin-top: 35px;
+    }
+    @keyframes slide {
+        100%{
+            top: -6.1rem;
+        }
+    }
+    .dynamic{
+        line-height: 1.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+    } 
+    .dynamic li{
+        font-size: 1.5rem;
+    }
+
+    .About{
+        height: 70vh;
+        width: 100vw;
+        margin-top: 0px;
+    }
+   
+    .introhead{
+        margin-top: 70px;
+        margin-left: 0px;
+        text-align: center;
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+    .style1{
+        padding: 20px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+
+    .head{
+        margin-top: 40px;
+        margin-left: 0px;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .secname{
+        margin-left: 0px;
+        text-align: center;
+        font-size: 1.8rem;
+    }       
+
+    .img1{
+        margin-top: 20px;
+        position: static;
+    }
+    
+    .img1pic{
+        display: block;
+        width: 280px;
+        height: 300px;  
+        margin: auto;
+    } 
+    .sec3{
+        margin-top: 20px;
+    }
+    
+    .sec3head{
+        font-size: 1.7rem;
+    } 
+    .icon{
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* media for the nav hamburger */
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navitems ul{
+        flex-direction: column; 
+        display: none;
+    }
+    .togglebtn{
+        display: flex;
+    }
+    .navitems ul li a{
+        width: 100vw;
+        margin-left: 75px;
+        text-align: center;
+    }
+    .navitems ul li a {
+        width: 100vw;
+        padding: 10px 15px;
+    }
+    
+    .navitems ul.active{
+        display: flex;
+    }
+
+    .one{
+        display: block;
+        position:absolute;
+        transform: rotate(45deg);
+        margin-top: 15px;
+    }
+    
+    .three{
+        display: block;
+        position:absolute;
+        transform: rotate(-45deg);
+        margin-top: 15px;
+    }
+
+    .two{
+        display: none;
+    }
+}
+
+
+/* Quires -> 6 */
+
+@media (min-width:280px) and (max-width:389px) {
+    .box{
+        height: 35vh;
+    }
+    nav li {
+        padding: 10px;
+        margin-right: 20px;
+    }
+    nav li a{
+        font-size: 1rem;
+        /* display: block; */
+    }
+    .togglebtn{
+        top:21px;
+        right: 30px;
+    }
+    .logo{
+        margin-left: 0px;
+        
+    }
+    .img{  
+        position: static; 
+        height: 300px;
+        width: 280px;  
+        display: block;
+        margin: auto; 
+        /* margin-top: 50px; */
+    }
+
+    .box1{
+        display: block  ;
+        margin-left: 0px;
+        text-align: center;
+        width: 98vw;
+        margin-top: 35px;
+    }
+    @keyframes slide {
+        100%{
+            top: -6.1rem;
+        }
+    }
+    .dynamic{
+        line-height: 1.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+    } 
+    .dynamic li{
+        font-size: 1.5rem;
+    }
+
+    .About{
+        height: 70vh;
+        width: 100vw;
+        margin-top: 80px;
+    }
+   
+    .introhead{
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: center;
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+    .style1{
+        padding: 20px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+
+    .head{
+        margin-top: 40px;
+        margin-left: 0px;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .secname{
+        margin-left: 0px;
+        text-align: center;
+        font-size: 1.8rem;
+    }       
+
+    .img1{
+        margin-top: 60px;
+        position: static;
+    }
+    
+    .img1pic{
+        display: block;
+        width: 230px;
+        height: 250px;  
+        margin: auto;
+    } 
+    .sec3{
+        margin-top: 20px;
+    }
+    
+    .sec3head{
+        font-size: 1.7rem;
+    } 
+    .icon{
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* media for the nav hamburger */
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navitems ul{
+        flex-direction: column; 
+        display: none;
+    }
+    .togglebtn{
+        display: flex;
+    }
+    .navitems ul li a{
+        width: 100vw;
+        margin-left: 75px;
+        text-align: center;
+    }
+    .navitems ul li a {
+        width: 100vw;
+        padding: 10px 15px;
+    }
+    
+    .navitems ul.active{
+        display: flex;
+    }
+
+    .one{
+        display: block;
+        position:absolute;
+        transform: rotate(45deg);
+        margin-top: 15px;
+    }
+    
+    .three{
+        display: block;
+        position:absolute;
+        transform: rotate(-45deg);
+        margin-top: 15px;
+    }
+
+    .two{
+        display: none;
+    }
+}
